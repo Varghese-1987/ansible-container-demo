@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  ansible-runner:
+    image: cloudapjacr.azurecr.io/poc/sitecore-ansible-runner:1
+    entrypoint: |
+      bash -c '\
+      ansible-playbook ./demo-playbook.yaml'
+    volumes:
+      - .\:/runner

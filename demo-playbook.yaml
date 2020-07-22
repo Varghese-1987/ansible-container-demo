@@ -1,0 +1,15 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Create An Auth Service Account
+      k8s:
+        src: service-account.yaml
+        kubeconfig: ./kubeconfig.config
+    - name: Create  cluster reader role in AKS
+      k8s:
+        src: reader-role-binding.yaml
+        kubeconfig: ./kubeconfig.config
+    - name: Apply cluster reader role binding to AKS
+      k8s:
+        src: reader-role.yaml
+        kubeconfig: ./kubeconfig.config
