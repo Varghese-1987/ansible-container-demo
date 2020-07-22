@@ -14,4 +14,4 @@ param(
 
 az login --service-principal --username $ServicePrincipalAppId --password $ServicePrincipalPassword --tenant $TenantId
 az aks get-credentials -g $ResourceGroupName -n $AksClusterName --file kubeconfig.config --overwrite-existing
-docker-compose.exe -f docker-compose.yaml up
+docker-compose.exe -f docker-compose.yaml up --remove-orphans
