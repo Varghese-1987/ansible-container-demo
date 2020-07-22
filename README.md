@@ -3,7 +3,7 @@
 
 This is a simple poc to demonstrate the capability of ansible-container in a windows machine
 
-Prerequisites :
+Prerequisites
 
 1) Should have docker desktop installed in your local machine
 
@@ -20,3 +20,8 @@ Prerequisites :
       your subscription
 
    ii)  Resource group in Azure which has the AKS cluster provisioned.  
+   
+   
+   Usage
+   
+   Invoke 'provision-aks-roles.ps1' via powershell and provide the necessary params required by the script.
